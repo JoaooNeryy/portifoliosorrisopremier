@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7C4B5C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sorriso Premier">
+<meta name="format-detection" content="telephone=no">
+<title>Sorriso Premier - Portfólio de Próteses</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:#fff linear-gradient(135deg,#f5f5f5 0%,#fff 100%)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#666;line-height:1.6;
+padding:calc(2rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(2rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left));
+-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto}
+header{text-align:center;margin-bottom:2.5rem}
+header h1{font-size:2rem;color:#7C4B5C;font-weight:700;letter-spacing:-.5px}
+header .tag{font-size:.75rem;color:#999;letter-spacing:2px;text-transform:uppercase;margin-top:.3rem}
+header h2{font-size:1.3rem;color:#666;font-weight:400;letter-spacing:.5px;margin-top:1rem}
+header p{max-width:560px;margin:.8rem auto 0;font-size:.95rem}
+.rev{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px);transition:opacity .6s ease-out,-webkit-transform .6s ease-out,transform .6s ease-out}
+.rev.in{opacity:1;-webkit-transform:none;transform:none}
+.card{background:#fff;border-radius:12px;padding:1.5rem;margin-bottom:1.75rem;border-left:4px solid #7C4B5C;box-shadow:0 2px 12px rgba(124,75,92,.08)}
+.head{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;margin-bottom:.9rem}
+.num{-webkit-flex:0 0 auto;flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:#7C4B5C;color:#fff;font-weight:700;text-align:center;line-height:38px;margin-right:.8rem}
+.card h3{font-size:1.2rem;line-height:1.3;color:#7C4B5C;font-weight:700}
+.desc{font-size:.95rem;margin-bottom:1.2rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-gap:1rem;margin-bottom:1.2rem}
+.box{padding:1rem 1.1rem;border-radius:8px;background:#F9F7F8;border-left:3px solid #7C4B5C}
+.box b{display:block;color:#7C4B5C;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem}
+.box ul{list-style:none}
+.box li{position:relative;padding-left:1rem;font-size:.9rem;line-height:1.55;margin-bottom:.25rem}
+.box li:before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:#C4949F}
+figure{margin:0}
+.foto{position:relative;width:100%;height:0;padding-bottom:62%;border-radius:10px;overflow:hidden;border:2px dashed #C4949F;background:#F9F7F8 linear-gradient(135deg,#F9F7F8 0%,#E8D5DC 100%)}
+.foto span{position:absolute;top:50%;left:0;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);text-align:center;color:#7C4B5C;font-weight:600;font-size:.95rem;letter-spacing:.5px}
+.foto span svg{display:block;margin:0 auto .5rem}
+.foto img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.closing{margin-top:2.5rem;padding:2rem 1.5rem;border-radius:12px;text-align:center;background:#F9F7F8 linear-gradient(135deg,#F9F7F8 0%,#E8D5DC 100%);border-left:4px solid #7C4B5C}
+.closing h2{font-size:1.5rem;line-height:1.3;color:#7C4B5C;margin-bottom:1rem}
+.closing p{max-width:600px;margin:0 auto .8rem;font-size:.98rem}
+.footer{text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #eee;font-size:.85rem;color:#999}
+@media(max-width:620px){.grid{grid-template-columns:1fr}header h1{font-size:1.6rem}.card{padding:1.2rem}.closing h2{font-size:1.3rem}}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;-webkit-transform:none;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>SORRISO PREMIER</h1>
+<div class="tag">Excelência em Odontologia</div>
+<h2>Portfólio de Próteses Dentárias</h2>
+<p>Conheça as soluções protéticas que oferecemos. Cada indicação é definida após avaliação clínica individual.</p>
+</header>
+<main id="lista"></main>
+<section class="closing rev">
+<h2>Cada sorriso merece um planejamento individualizado.</h2>
+<p>A escolha da prótese ideal depende de uma avaliação criteriosa, que considera as condições bucais, as necessidades funcionais e as expectativas estéticas de cada paciente.</p>
+<p>Nosso compromisso é oferecer soluções protéticas planejadas com atenção aos detalhes, buscando unir funcionalidade, conforto e naturalidade.</p>
+</section>
+<div class="footer"><p>Sorriso Premier © 2026 | Excelência em Odontologia</p></div>
+</div>
+<script>
+/* Para inserir uma foto: preencha o campo "foto" do tratamento com o caminho/URL da imagem. Ex.: foto:"fotos/total.jpg" */
+var P=[
+{t:"Prótese Total Removível (Dentadura)",
+d:"Indicada para pacientes que perderam todos os dentes de uma arcada, a prótese total removível busca restabelecer a função mastigatória, a estética do sorriso e o suporte dos tecidos faciais. É confeccionada de acordo com as características anatômicas e as necessidades de cada paciente.",
+i:["Perda de todos os dentes de uma arcada","Pacientes que desejam recuperar mastigação e estética"],
+f:["Confeccionada conforme a anatomia de cada paciente","Escolha e disposição dos dentes planejadas para o sorriso","Pode receber ajustes ao longo do tempo"],
+b:["Recupera a função mastigatória","Devolve suporte aos lábios e às bochechas","Sorriso mais harmonioso"],
+o:["Arcada superior","Arcada inferior","Ambas as arcadas"],foto:""},
+{t:"Prótese Parcial Removível com Grampos",
+d:"Indicada para pacientes que perderam alguns dentes e ainda possuem dentes naturais remanescentes que podem auxiliar na sustentação da prótese. Os grampos contribuem para sua retenção, permitindo repor os dentes ausentes e recuperar parte da função mastigatória e da estética.",
+i:["Ausência de alguns dentes","Presença de dentes naturais que possam servir de apoio"],
+f:["Grampos que auxiliam na retenção","Pode ser removida para higienização","Aproveita os dentes naturais remanescentes"],
+b:["Repõe os dentes ausentes","Recupera parte da mastigação","Melhora a estética do sorriso"],
+o:["Estrutura em metal ou em acrílico, conforme o caso","Reposição de um ou de vários dentes"],foto:""},
+{t:"Prótese Fixa",
+d:"Solução protética indicada para restaurar dentes comprometidos ou substituir dentes ausentes, conforme o planejamento clínico. Fixada sobre dentes preparados ou outros suportes apropriados, busca proporcionar estabilidade, eficiência mastigatória e harmonia estética.",
+i:["Dentes comprometidos a restaurar","Dentes ausentes a substituir, com suporte adequado"],
+f:["Fixada, sem necessidade de remoção diária","Planejamento clínico individualizado","Acabamento voltado à harmonia com o sorriso"],
+b:["Estabilidade","Eficiência mastigatória","Harmonia estética"],
+o:["Coroas","Pontes fixas","Materiais definidos conforme o planejamento clínico"],foto:""},
+{t:"Prótese Parcial Removível sem Grampos Metálicos",
+d:"Alternativa para a reposição de dentes ausentes, desenvolvida para oferecer uma aparência mais discreta, sem os grampos metálicos convencionais visíveis. O desenho, o material e a indicação são definidos de acordo com as condições clínicas e as necessidades de cada paciente.",
+i:["Ausência de dentes","Pacientes que buscam uma aparência mais discreta"],
+f:["Sem grampos metálicos convencionais visíveis","Desenho e material escolhidos para cada caso"],
+b:["Aparência mais discreta","Naturalidade no sorriso","Reposição dos dentes ausentes"],
+o:["Desenho e material definidos após avaliação clínica"],foto:""},
+{t:"Prótese sobre Implante",
+d:"Indicada para a reposição de um ou mais dentes por meio de uma prótese instalada sobre implantes dentários. É planejada para restabelecer a função mastigatória e a estética, considerando o posicionamento dos implantes, a oclusão e as características do sorriso.",
+i:["Reposição de um ou mais dentes","Pacientes com indicação para implantes dentários"],
+f:["Instalada sobre implantes","Planejamento considera posição dos implantes, oclusão e sorriso","Dispensa apoio nos dentes vizinhos"],
+b:["Restabelece a função mastigatória","Estética planejada nos detalhes"],
+o:["Prótese unitária","Prótese com vários dentes"],foto:""},
+{t:"Prótese Protocolo",
+d:"Reabilitação fixa de uma arcada dentária, sustentada por implantes, indicada principalmente para pacientes com perda total dos dentes. O tratamento busca recuperar a capacidade mastigatória, a estética e a segurança ao sorrir, por meio de um planejamento individualizado.",
+i:["Perda total dos dentes de uma arcada","Pacientes que buscam reabilitação fixa"],
+f:["Arcada completa sustentada por implantes","Planejamento individualizado"],
+b:["Recupera a capacidade mastigatória","Estética do sorriso","Segurança ao sorrir"],
+o:["Arcada superior","Arcada inferior","Ambas as arcadas"],foto:""}
+];
+var ICON='<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7C4B5C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+function ul(a){return '<ul>'+a.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'}
+function box(n,a){return '<div class="box"><b>'+n+'</b>'+ul(a)+'</div>'}
+document.getElementById('lista').innerHTML=P.map(function(p,k){
+var img=p.foto?'<img src="'+p.foto+'" alt="'+p.t+'">':'<span>'+ICON+'Inserir foto aqui</span>';
+return '<article class="card rev"><div class="head"><div class="num">'+(k+1)+'</div><h3>'+p.t+'</h3></div>'
++'<p class="desc">'+p.d+'</p><div class="grid">'+box('Indicações',p.i)+box('Diferenciais',p.f)+box('Benefícios',p.b)+box('Opções',p.o)+'</div>'
++'<figure><div class="foto">'+img+'</div></figure></article>'}).join('');
+var els=document.querySelectorAll('.rev');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+for(var i=0;i<els.length;i++)io.observe(els[i]);
+}else{for(var j=0;j<els.length;j++)els[j].classList.add('in')}
+</script>
+</body>
+</html>
